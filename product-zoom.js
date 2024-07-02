@@ -71,12 +71,10 @@ class Zoomable {
 
         const elPos = this.element.getBoundingClientRect();
 
-        const percentageX = `${
-            ((evt.clientX - elPos.left) * 100) / elPos.width
-        }%`;
-        const percentageY = `${
-            ((evt.clientY - elPos.top) * 100) / elPos.height
-        }%`;
+        const percentageX = `${((evt.clientX - elPos.left) * 100) / elPos.width
+            }%`;
+        const percentageY = `${((evt.clientY - elPos.top) * 100) / elPos.height
+            }%`;
 
         this.element.style.setProperty("--zoom-pos-x", percentageX);
         this.element.style.setProperty("--zoom-pos-y", percentageY);
