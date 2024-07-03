@@ -11,19 +11,19 @@
     height: 100%;
 }
 
-.insta-color{
+.insta-color {
     color: #E1306C;
 }
 
-.sub-images{
+.sub-images {
     width: 60%;
 }
 
-.sub-images img{
+.sub-images img {
     width: 31.50%;
 }
 
-.fix-650{
+.fix-650 {
     max-width: 650px;
     max-height: 650px;
 
@@ -36,12 +36,35 @@
     overflow: hidden;
     /* border-radius: 30px; */
     /* box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); */
-  }
-  .zoomable__img {
+}
+
+.zoomable__img {
     transform-origin: var(--zoom-pos-x, 0%) var(--zoom-pos-y, 0%);
     transition: transform 0.15s linear;
-  }
-  .zoomable--zoomed .zoomable__img {
+}
+
+.zoomable--zoomed .zoomable__img {
     cursor: zoom-in;
     transform: scale(var(--zoom, 2));
-  }
+}
+
+/* arrows */
+.arrows {
+    position: absolute;
+    height: 100%;
+    z-index: 1;
+    padding: 46% 20px;
+}
+
+.arrow-left {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(0, 0, 0, .3) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.arrow-right {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(270deg, rgba(0, 0, 0, .3) 0%, rgba(255, 255, 255, 0) 100%);
+    right: 0;
+}
+
+/* arrows */

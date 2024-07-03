@@ -1,4 +1,6 @@
 // Product Image Changer
+
+// Direc Click on Image
 const carusel = document.querySelectorAll('.carusel'),
   zoomable__img = document.querySelector('.zoomable__img');
 
@@ -10,5 +12,7 @@ const retrieveImage = event => {
 }
 
 carusel.forEach(e => (e.addEventListener('click', retrieveImage)));
+
+
 
 // END Product Image Changer
