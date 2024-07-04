@@ -54,6 +54,12 @@
     height: 100%;
     z-index: 1;
     padding: 46% 20px;
+    opacity: 0.5;
+    transition: 200ms ease opacity;
+}
+
+.arrows:hover {
+    opacity: 1;
 }
 
 .arrow-left {
