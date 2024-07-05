@@ -20,6 +20,11 @@ const slideLeft = e => {
   changeSlide('neg');
 }
 
+const slideRight = e => {
+  // console.log(e.target);
+  changeSlide('pos');
+}
+
 
 // Find the Current SLider
 const currentSlide = e => {
@@ -30,17 +35,31 @@ const currentSlide = e => {
 
 const changeSlide = e => {
   const slideNum = Number(currentSlide());
-  const slideLoop = [1, 2, 3];
-  console.log(slideNum)
-
+  // debugger
   if (e === 'neg') {
-    if (slideNum === 1) { }
+    if (slideNum === 1) {
+      zoomable__img.setAttribute('data-current-slide', '3')
+    } else if (slideNum === 2) {
+      zoomable__img.setAttribute('data-current-slide', '1')
+    } else {
+      zoomable__img.setAttribute('data-current-slide', '2')
+    }
+  } else if (e === 'pos') {
+    if (slideNum === 1) {
+      zoomable__img.setAttribute('data-current-slide', '2')
+    } else if (slideNum === 2) {
+      zoomable__img.setAttribute('data-current-slide', '3')
+    } else {
+      zoomable__img.setAttribute('data-current-slide', '1')
+    }
   }
+  console.log(slideNum)
 }
 
 
 
 arrow_left.addEventListener('click', slideLeft);
+arrow_right.addEventListener('click', slideRight);
 
 
 
