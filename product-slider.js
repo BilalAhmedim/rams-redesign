@@ -1,5 +1,4 @@
 // Product Image Slider
-
 const carusel = document.querySelectorAll('.carusel'),
   zoomable__img = document.querySelector('.zoomable__img'),
   arrow_left = document.querySelector('.arrow-left'),
@@ -16,23 +15,24 @@ carusel.forEach(e => (e.addEventListener('click', retrieveImage)));
 
 // Slide Left
 const slideLeft = e => {
-  // console.log(e.target);
   changeSlide('neg');
 }
 
+// Slide Right
 const slideRight = e => {
-  // console.log(e.target);
   changeSlide('pos');
 }
 
 
-// Find the Current SLider
+// Find the Current SLide
 const currentSlide = e => {
   const currentSlide_number = zoomable__img.getAttribute('data-current-slide');
   return currentSlide_number;
 }
-// end find the current slider
+// end find the current slide
 
+
+// Change Slide Right / Left
 const changeSlide = e => {
   const slideNum = Number(currentSlide());
   // debugger
@@ -56,8 +56,10 @@ const changeSlide = e => {
   console.log(slideNum)
 }
 
+// end Change Slide Right / Left
 
 
+// Slider arrow Events Right / Left
 arrow_left.addEventListener('click', slideLeft);
 arrow_right.addEventListener('click', slideRight);
 
