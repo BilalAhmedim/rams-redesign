@@ -20,13 +20,11 @@
 }
 
 .sub-images img {
-    width: 31.50%;
+    width: calc(33.33% - .187rem)
 }
 
-.fix-650 {
-    max-width: 650px;
-    max-height: 650px;
-
+.aspect-ratio-1 {
+    aspect-ratio: 1 / 1;
 }
 
 /* image zoomer */
