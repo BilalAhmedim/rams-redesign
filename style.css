@@ -72,3 +72,9 @@
 }
 
 /* arrows */
+
+/* Logo Size */
+img#logo-image{
+    max-height: 48px;
+}
+/* End Logo Size */
