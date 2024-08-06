@@ -9,7 +9,7 @@ services:
       MYSQL_PASSWORD: rams-dbp
       MYSQL_RANDOM_ROOT_PASSWORD: "1"
     volumes:
-      - ./src/db:/var/lib/mysql
+      - ./db:/var/lib/mysql
 
   rams-wp:
     image: "wordpress"
