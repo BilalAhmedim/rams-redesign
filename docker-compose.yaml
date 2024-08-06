@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  rams-db:
+    image: "mysql:latest"
+    environment:
+      MYSQL_DATABASE: rams-db
+      MYSQL_USER: rams-dbu
+      MYSQL_PASSWORD: rams-dbp
+      MYSQL_RANDOM_ROOT_PASSWORD: "1"
+    volumes:
+      - ./src/db:/var/lib/mysql
+
+  rams-wp:
+    image: "wordpress"
+    ports:
+      - 8080:80
+    environment:
+      WORDPRESS_DB_HOST: rams-db
+      WORDPRESS_DB_USER: rams-dbu
+      WORDPRESS_DB_PASSWORD: rams-dbp
+      WORDPRESS_DB_NAME: rams-db
+    volumes:
+      - ./src:/var/www/html/wp-content/themes/rams
+    depends_on:
+      - rams-db
+
+volumes:
+  db:
