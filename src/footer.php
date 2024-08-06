@@ -24,14 +24,14 @@
 
         <div class="column">
           <p class="menu-label">Social Media</p>
-          <a href="#" aria-label="Rams International Facebook Page"><i
+          <a href="https://www.facebook.com/ramsinternational/" aria-label="Rams International Facebook Page"><i
               class="fa-brands mx-2 my-2 fa-3x fa-facebook"></i></a>
           <a href="#" aria-label="Rams International Instagram Handel"><i
               class="fa-brands mx-2 my-2 fa-3x fa-instagram insta-color"></i></a>
           <br />
           <a href="#" aria-label="Rams International X"><i
               class="fa-brands mx-2 my-2 ml-3 fa-3x fa-x has-text-black"></i></a>
-          <a href="#" aria-label="Rams International Linkedin"><i
+          <a href="https://in.linkedin.com/company/rams-international-india" aria-label="Rams International Linkedin"><i
               class="fa-brands mx-2 my-2 ml-4 fa-3x fa-linkedin"></i></a>
         </div>
 
