@@ -14,7 +14,7 @@
 
       <div class="navbar-brand py-4">
         <a class="navbar-item" href="https://bulma.io">
-          <img src="./asset/rams-logo.png" id="logo-image" alt="Logo" />
+          <img src="<?php echo get_template_directory_uri(); ?>/asset/rams-logo.png" id="logo-image" alt="Logo" />
         </a>
 
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">

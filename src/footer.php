@@ -5,7 +5,7 @@
         <div class="column">
           <a href="#" class="has-text-left">
             <figure class="image">
-              <img class="image is-96x96" src="./asset/rams-logo.png" alt="Logo" />
+              <img class="image is-96x96" src="<?php echo get_template_directory_uri(); ?>/asset/rams-logo.png" alt="Logo" />
             </figure>
             <h3 class="subtitle is-6">&copy; Rams International.<br /> All rights reserved.</h3>
           </a>
