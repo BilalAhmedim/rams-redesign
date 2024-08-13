@@ -19,21 +19,29 @@ if (is_front_page()){ // Homne Page Hero Section
   </section>
 
   <?php //Service Section
-    $quality = get_field('quality');
-    $quality_title = get_field('quality_title');
-    $quality_dec = get_field('quality_dec');
 
-    $delivery = get_field('delivery');
-    $delivery_title = get_field('delivery_title');
-    $delivery_dec = get_field('delivery_dec');
-
-    $warranty = get_field('warranty');
-    $warranty_title = get_field('warranty_title');
-    $warranty_dec = get_field('warranty_dec');
-
-    $approach = get_field('approach');
-    $approach_title = get_field('approach_title');
-    $approach_dec = get_field('approach_dec');
+  $features = [
+    [
+      'image'=> get_field('quality')['url'],
+      'title'=>get_field('quality_title'),
+      'description'=>get_field('quality_dec')
+    ],
+    [
+      'image'=> get_field('delivery')['url'],
+      'title'=>get_field('delivery_title'),
+      'description'=>get_field('delivery_dec')
+    ],
+    [
+      'image'=> get_field('warranty')['url'],
+      'title'=>get_field('warranty_title'),
+      'description'=>get_field('warranty_dec')
+    ],
+    [
+      'image'=> get_field('approach')['url'],
+      'title'=>get_field('approach_title'),
+      'description'=>get_field('approach_dec')
+    ],
+  ];
     
   ?>
 
@@ -43,33 +51,16 @@ if (is_front_page()){ // Homne Page Hero Section
 
       <div class="columns">
 
-        <div class="column is-block has-text-centered">
-          <?php echo '<img src="'. print_r($quality).'" class="image is-128x128 is-inline-block" alt="Placeholder">';?>
-          <?php echo '<h3 class="subtitle is-4">'. $quality_title.'</h3>';?>
-          <?php echo '<p>'.$quality_dec.'</p>';?>
+        <?php
+        foreach ($features as $feature) {?>
+          <div class="column is-block has-text-centered">
+          <?php echo '<img src="'. $feature['image'].'" class="image is-128x128 is-inline-block" alt="Placeholder">';?>
+          <?php echo '<h3 class="subtitle is-4">'. $feature['title'].'</h3>';?>
+          <?php echo '<p>'.$feature['description'].'</p>';?>
         </div>
-
-        <div class="column is-block has-text-centered">
-          <img src="./asset/Services/package.png" class="image is-128x128 is-inline-block" alt="Placeholder">
-          <h3 class="subtitle is-4">Timely Delivery</h3>
-          <p>Timely delivery is essential, showcasing reliability and professionalism. We ensure our handicrafts reach
-            clients promptly through efficient planning and communication, fostering trust.</p>
-        </div>
-
-        <div class="column is-block has-text-centered">
-          <img src="./asset/Services/warranty.png" class="image is-128x128 is-inline-block" alt="Placeholder">
-          <h3 class="subtitle is-4">Long-Term Warranty</h3>
-          <p>Our long-term warranty ensures customer satisfaction and product quality, offering peace of mind and trust
-            in our handicraft items.</p>
-        </div>
-
-        <div class="column is-block has-text-centered">
-          <img src="./asset/Services/global-shipping.png" class="image is-128x128 is-inline-block" alt="Placeholder">
-          <h3 class="subtitle is-4">World Wide Aproch</h3>
-          <p>Our global approach ensures we serve customers worldwide with tailored solutions and understanding of
-            diverse markets.</p>
-        </div>
-
+        <?php
+        } // END Services Section
+        ?>
       </div>
 
     </div>
