@@ -72,69 +72,96 @@ if (is_front_page()){ // Homne Page Hero Section
   $gallery_as = get_field('additional-sinks');
   $gallery_hoods = get_field('hoods');
   ?>
-  <section class="section is-primary is-medium">
 
-<div class="container">
-  <h1 class="title is-1 pb-5">Products Gallery</h1>
+<section class="section is-primary is-medium">
 
-  <div class="columns is-variable is-8 pb-4">
+  <div class="container">
+    <h1 class="title is-1 pb-5">Products Gallery</h1>
 
-    <div class="column is-one-third">
-      <a href="#" class="">
-        <figure class="image">
-          <img class="is-rounded" src="<?php echo $gallery_bath['sizes']['medium_large'] .'"' . ' alt='.$gallery_bath['alt'];?>" />
-        </figure>
-        <h2 class="subtitle is-4 pt-2 has-text-centered"><?php echo $gallery_bath['title']?></h2>
-      </a>
+    <div class="columns is-variable is-8 pb-4">
+
+      <div class="column is-one-third">
+        <a href="#" class="">
+          <figure class="image">
+            <img class="is-rounded" src="<?php echo $gallery_bath['sizes']['medium_large'] .'"' . ' alt='.$gallery_bath['alt'];?>" />
+          </figure>
+          <h2 class="subtitle is-4 pt-2 has-text-centered"><?php echo $gallery_bath['title']?></h2>
+        </a>
+      </div>
+
+      <div class="column is-one-third">
+        <a href="#" class="">
+          <figure class="image">
+            <img class="is-rounded" src="<?php echo $gallery_fs['sizes']['medium_large'] .'"' . ' alt='.$gallery_fs['alt'];?>" />
+          </figure>
+          <h2 class="subtitle is-4 pt-2 has-text-centered"><?php echo $gallery_fs['title']?></h2>
+        </a>
+      </div>
+
+      <div class="column is-one-third">
+        <a href="#" class="">
+          <figure class="image">
+            <img class="is-rounded" src="<?php echo $gallery_us['sizes']['medium_large'] .'"' . ' alt='.$gallery_us['alt'];?>" />
+          </figure>
+          <h2 class="subtitle is-4 pt-2 has-text-centered"><?php echo $gallery_us['title']?></h2>
+        </a>
+      </div>
+
     </div>
 
-    <div class="column is-one-third">
-      <a href="#" class="">
-        <figure class="image">
-          <img class="is-rounded" src="<?php echo $gallery_fs['sizes']['medium_large'] .'"' . ' alt='.$gallery_fs['alt'];?>" />
-        </figure>
-        <h2 class="subtitle is-4 pt-2 has-text-centered"><?php echo $gallery_fs['title']?></h2>
-      </a>
-    </div>
+    <div class="columns is-justify-content-center">
 
-    <div class="column is-one-third">
-      <a href="#" class="">
-        <figure class="image">
-          <img class="is-rounded" src="<?php echo $gallery_us['sizes']['medium_large'] .'"' . ' alt='.$gallery_us['alt'];?>" />
-        </figure>
-        <h2 class="subtitle is-4 pt-2 has-text-centered"><?php echo $gallery_us['title']?></h2>
-      </a>
+      <div class="column is-one-third">
+        <a href="#" class="">
+          <figure class="image">
+            <img class="is-rounded" src="<?php echo $gallery_as['sizes']['medium_large'] .'"' . ' alt='.$gallery_as['alt'];?>" />
+          </figure>
+          <h2 class="subtitle is-4 pt-2 has-text-centered"><?php echo $gallery_as['title']?></h2>
+        </a>
+      </div>
+
+      <div class="column is-one-third">
+        <a href="#" class="">
+          <figure class="image">
+            <img class="is-rounded" src="<?php echo $gallery_hoods['sizes']['medium_large'] .'"' . ' alt='.$gallery_hoods['alt'];?>" />
+          </figure>
+          <h2 class="subtitle is-4 pt-2 has-text-centered"><?php echo $gallery_hoods['title']?></h2>
+        </a>
+      </div>
+
     </div>
 
   </div>
-
-  <div class="columns is-justify-content-center">
-
-    <div class="column is-one-third">
-      <a href="#" class="">
-        <figure class="image">
-          <img class="is-rounded" src="<?php echo $gallery_as['sizes']['medium_large'] .'"' . ' alt='.$gallery_as['alt'];?>" />
-        </figure>
-        <h2 class="subtitle is-4 pt-2 has-text-centered"><?php echo $gallery_as['title']?></h2>
-      </a>
-    </div>
-
-    <div class="column is-one-third">
-      <a href="#" class="">
-        <figure class="image">
-          <img class="is-rounded" src="<?php echo $gallery_hoods['sizes']['medium_large'] .'"' . ' alt='.$gallery_hoods['alt'];?>" />
-        </figure>
-        <h2 class="subtitle is-4 pt-2 has-text-centered"><?php echo $gallery_hoods['title']?></h2>
-      </a>
-    </div>
-
-  </div>
-
-</div>
 
 </section>
 <?php //gallery section?>
 
+
+<?php
+$cta = get_field('cta');
+$cta_title = get_field('cta_title');
+?>
+<section class="hero has-background is-medium py-6">
+
+<div class="container">
+  <img alt="Fill Murray" class="hero-background" src="<?php echo $cta['url']?>" />
+  <div class="hero-body">
+    <div class="container has-text-left">
+      <p class="subtitle is-3 has-text-centered has-text-gray"><?php echo $cta_title; ?></p>
+
+      <div class="field has-addons has-addons-centered">
+        <div class="control">
+          <input class="input" type="email" placeholder="Contact Us">
+        </div>
+        <div class="control">
+          <button class="button is-info">Submit</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</section>
 <?php
 }
 ?>
