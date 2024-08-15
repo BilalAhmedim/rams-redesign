@@ -5,9 +5,10 @@ $hero_title = get_field('hero-title');
 $hero_subtitle = get_field('hero_subtitle');
 
 
-if (is_front_page()){ // Homne Page Hero Section
+if (is_front_page()){ // Home Page
+  // Hero Section
 ?>
- <section class="hero is-primary is-large has-background">
+  <section class="hero is-primary is-large has-background">
     <img alt="Bath" class="hero-background" src="<?php echo $hero_image;?>" />
 
     <div class="hero-body">
@@ -19,7 +20,6 @@ if (is_front_page()){ // Homne Page Hero Section
   </section>
 
   <?php //Service Section
-
   $features = [
     [
       'image'=> get_field('quality')['url'],
@@ -62,7 +62,8 @@ if (is_front_page()){ // Homne Page Hero Section
       </div>
 
     </div>
-  </section><?// service section?>
+  </section>
+  <?// service section?>
 
   <?php
   // Gallery Section
@@ -72,7 +73,6 @@ if (is_front_page()){ // Homne Page Hero Section
   $gallery_as = get_field('additional-sinks');
   $gallery_hoods = get_field('hoods');
   ?>
-
 <section class="section is-primary is-medium">
 
   <div class="container">
@@ -81,7 +81,7 @@ if (is_front_page()){ // Homne Page Hero Section
     <div class="columns is-variable is-8 pb-4">
 
       <div class="column is-one-third">
-        <a href="#" class="">
+        <a href="http://localhost:8080/category/baths/">
           <figure class="image">
             <img class="is-rounded" src="<?php echo $gallery_bath['sizes']['medium_large'] .'"' . ' alt='.$gallery_bath['alt'];?>" />
           </figure>
@@ -90,7 +90,7 @@ if (is_front_page()){ // Homne Page Hero Section
       </div>
 
       <div class="column is-one-third">
-        <a href="#" class="">
+        <a href="http://localhost:8080/category/farmhouse-sinks/">
           <figure class="image">
             <img class="is-rounded" src="<?php echo $gallery_fs['sizes']['medium_large'] .'"' . ' alt='.$gallery_fs['alt'];?>" />
           </figure>
@@ -99,7 +99,7 @@ if (is_front_page()){ // Homne Page Hero Section
       </div>
 
       <div class="column is-one-third">
-        <a href="#" class="">
+        <a href="http://localhost:8080/category/undermount-sinks/">
           <figure class="image">
             <img class="is-rounded" src="<?php echo $gallery_us['sizes']['medium_large'] .'"' . ' alt='.$gallery_us['alt'];?>" />
           </figure>
@@ -112,7 +112,7 @@ if (is_front_page()){ // Homne Page Hero Section
     <div class="columns is-justify-content-center">
 
       <div class="column is-one-third">
-        <a href="#" class="">
+        <a href="http://localhost:8080/category/additional-sinks/">
           <figure class="image">
             <img class="is-rounded" src="<?php echo $gallery_as['sizes']['medium_large'] .'"' . ' alt='.$gallery_as['alt'];?>" />
           </figure>
@@ -121,7 +121,7 @@ if (is_front_page()){ // Homne Page Hero Section
       </div>
 
       <div class="column is-one-third">
-        <a href="#" class="">
+        <a href="http://localhost:8080/category/hoods/">
           <figure class="image">
             <img class="is-rounded" src="<?php echo $gallery_hoods['sizes']['medium_large'] .'"' . ' alt='.$gallery_hoods['alt'];?>" />
           </figure>
@@ -134,35 +134,42 @@ if (is_front_page()){ // Homne Page Hero Section
   </div>
 
 </section>
-<?php //gallery section?>
+<?php 
+//gallery section?>
 
 
 <?php
+// CTA Section
 $cta = get_field('cta');
 $cta_title = get_field('cta_title');
 ?>
 <section class="hero has-background is-medium py-6">
 
-<div class="container">
-  <img alt="Fill Murray" class="hero-background" src="<?php echo $cta['url']?>" />
-  <div class="hero-body">
-    <div class="container has-text-left">
-      <p class="subtitle is-3 has-text-centered has-text-gray"><?php echo $cta_title; ?></p>
+  <div class="container">
+    <img alt="Fill Murray" class="hero-background" src="<?php echo $cta['url']?>" />
+    <div class="hero-body">
+      <div class="container has-text-left">
+        <p class="subtitle is-3 has-text-centered has-text-gray"><?php echo $cta_title; ?></p>
 
-      <div class="field has-addons has-addons-centered">
-        <div class="control">
-          <input class="input" type="email" placeholder="Contact Us">
+        <div class="field has-addons has-addons-centered">
+          <div class="control">
+            <input class="input" type="email" placeholder="Contact Us">
+          </div>
+          <div class="control">
+            <button class="button is-info">Submit</button>
+          </div>
         </div>
-        <div class="control">
-          <button class="button is-info">Submit</button>
-        </div>
+
       </div>
-
     </div>
   </div>
-</div>
 </section>
 <?php
+} // Front PAGE
+else {
+  $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+  $slug = basename(parse_url($url, PHP_URL_PATH));
+  echo $slug;
 }
 ?>
 <?php get_footer();?>

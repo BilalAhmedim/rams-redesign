@@ -28,13 +28,13 @@
       <div id="navbarBasicExample" class="navbar-menu py-4">
         <div class="navbar-end">
           <a href="/" class="navbar-item">Home</a>
-          <a href="gallery.html" class="navbar-item">Bathtub</a>
-          <a class="navbar-item">Farmhouse Sink</a>
-          <a class="navbar-item">Undermount Sink</a>
-          <a class="navbar-item">Additional Sink</a>
-          <a class="navbar-item">Hoods</a>
-          <a href="about.html" class="navbar-item">About</a>
-          <a href="contact.html" class="navbar-item">Contact</a>
+          <a href="http://localhost:8080/category/baths/" class="navbar-item">Bathtub</a>
+          <a href="http://localhost:8080/category/farmhouse-sinks/" class="navbar-item">Farmhouse Sink</a>
+          <a href="http://localhost:8080/category/undermount-sinks/" class="navbar-item">Undermount Sink</a>
+          <a href="http://localhost:8080/category/additional-sinks/" class="navbar-item">Additional Sink</a>
+          <a href="http://localhost:8080/category/hoods/" class="navbar-item">Hoods</a>
+          <a href="http://localhost:8080/about/" class="navbar-item">About</a>
+          <a href="http://localhost:8080/contact/" class="navbar-item">Contact</a>
         </div>
       </div>
 
