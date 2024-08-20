@@ -189,7 +189,7 @@ else {
           if ($counter != 0) {
             echo '</div></div>';
           }
-          echo '<div class="column"><div class="columns is-mobile">';
+          echo '<div class="column is-half-mobile is-half-desktop"><div class="columns is-mobile">';
         }
         ?>
         <div class="column is-half-mobile is-half-desktop">

@@ -9,6 +9,12 @@ $product_finish = get_field('product_finish');
 $product_description = get_field('product_description');
 $product_material = get_field('product_material');
 $finishes_available = get_field('finishes_available');
+
+
+$categories = get_the_category();
+  foreach ( $categories as $category ) {
+    $category_name = esc_html( $category->slug );
+  }
 ?>
 
 <section class="section">
@@ -18,9 +24,8 @@ $finishes_available = get_field('finishes_available');
           <!-- Breadcrub -->
           <nav class="breadcrumb" aria-label="breadcrumbs">
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Page</a></li>
-              <li class="is-active"><a href="#" aria-current="page">Components</a></li>
+              <li><a href="<?php echo home_url();?>">Home</a></li>
+              <li><a href="<?php echo home_url() .'/category/'. $category_name ;?>" aria-current="page"><?php echo ucwords($category_name);?></a></li>
             </ul>
           </nav>
           <!-- end-of Breadcrub -->
@@ -29,15 +34,15 @@ $finishes_available = get_field('finishes_available');
               class="fa-solid fa-angles-left dropdown fa-2x is-pulled-left is-unselectable is-clickable arrows arrow-left"></i>
             <i
               class="fa-solid fa-angles-right fa-2x is-pulled-right is-unselectable is-clickable arrows arrow-right"></i>
-            <img class="zoomable__img" src="https://placehold.co/750x750" data-current-slide="1" alt="">
+            <img class="zoomable__img" src="<?php echo $front_image['sizes']['large']; ?>" data-current-slide="1" alt="">
           </div>
           <div class="sub-images mx-auto is-centered">
-            <img class="carusel" src="https://placehold.co/150x150" data-img-src="1"
-              data-src-large="https://placehold.co/750x750" alt="">
-            <img class="carusel" src="https://placehold.co/150x150" data-img-src="2"
-              data-src-large="https://placehold.co/850x850" alt="">
-            <img class="carusel" src="https://placehold.co/150x150" data-img-src="3"
-              data-src-large="https://placehold.co/950x950" alt="">
+            <img class="carusel" src="<?php echo $front_image['sizes']['thumbnail']; ?>" data-img-src="1"
+              data-src-large="<?php echo $front_image['sizes']['large']; ?>" alt="">
+            <img class="carusel" src="<?php echo $side_image['sizes']['thumbnail']; ?>" data-img-src="2"
+              data-src-large="<?php echo $side_image['sizes']['large']; ?>" alt="">
+            <img class="carusel" src="<?php echo $top_image['sizes']['thumbnail']; ?>" data-img-src="3"
+              data-src-large="<?php echo $top_image['sizes']['large']; ?>" alt="">
           </div>
 
 
