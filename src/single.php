@@ -51,15 +51,15 @@ $categories = get_the_category();
 
         <div class="column-6 mt-6">
           <div class="product-detail pl-5">
-            <h2 class="subtitle is-3 b-4">Product Details</h2>
+            <h2 class="subtitle is-3 mb-6">Product Details</h2>
             <ul class="product-details">
-              <li class="mb-4 is-size-5"><span class="has-text-weight-medium">Product Name : </span><?php echo $product_name ;?></li>
-              <li class="mb-4 is-size-5"><span class="has-text-weight-medium">Item Number : </span><?php echo $item_number;?></li>
-              <li class="mb-4 is-size-5"><span class="has-text-weight-medium">Size : </span><?php echo $size;?></li>
-              <li class="mb-4 is-size-5"><span class="has-text-weight-medium">Finish : </span><?php echo $product_finish;?></li>
-              <li class="mb-4 is-size-5"><span class="has-text-weight-medium">Material : </span><?php echo $product_material;?></li>
-              <li class="mb-4 is-size-5"><span class="has-text-weight-medium">Finishes Available : </span><?php echo $finishes_available;?></li>
-              <li class="mb-4 is-size-5"><span class="has-text-weight-medium">Product Description : </span><?php echo $product_description;?></li>
+              <li class="mb-5 is-size-5"><span class="has-text-weight-medium">Product Name :</span><?php echo $product_name ;?></li>
+              <li class="mb-5 is-size-5"><span class="has-text-weight-medium">Item Number : </span><?php echo $item_number;?></li>
+              <li class="mb-5 is-size-5"><span class="has-text-weight-medium">Size : </span><?php echo $size;?></li>
+              <li class="mb-5 is-size-5"><span class="has-text-weight-medium">Finish : </span><?php echo $product_finish;?></li>
+              <li class="mb-5 is-size-5"><span class="has-text-weight-medium">Material : </span><?php echo $product_material;?></li>
+              <li class="mb-5 is-size-5"><span class="has-text-weight-medium">Finishes Available : </span><?php echo $finishes_available;?></li>
+              <li class="mb-5 is-size-5"><span class="has-text-weight-medium">Product Description : </span><?php echo $product_description;?></li>
             </ul>
           </div>
         </div>
