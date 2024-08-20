@@ -169,8 +169,6 @@ $cta_title = get_field('cta_title');
 else {
   $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
   $slug = basename(parse_url($url, PHP_URL_PATH));
-  echo $slug;
-
   $args = array(
     'post_type' => 'post',
     'category_name' => $slug ,
