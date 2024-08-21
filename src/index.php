@@ -185,6 +185,7 @@ else {
       $counter = 0;
       echo '<div class="columns pb-4">';
       while ($query->have_posts()) : $query->the_post();
+      $image = get_field('front_image');
         if ($counter % 2 == 0) {
           if ($counter != 0) {
             echo '</div></div>';
@@ -195,7 +196,7 @@ else {
         <div class="column is-half-mobile is-half-desktop">
           <a href="<?php the_permalink(); ?>" class="">
             <figure class="image">
-              <img src="https://placehold.co/400x400" alt="<?php the_title_attribute(); ?>" />
+              <img src="<?php echo $image['sizes']['medium'];?>" alt="<?php echo $image['alt'] ?>" />
             </figure>
             <h2 class="subtitle is-4 pt-2 has-text-centered"><?php the_title(); ?></h2>
           </a>
