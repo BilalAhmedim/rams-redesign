@@ -5,7 +5,6 @@
   <?php wp_head(); ?>
   <meta charset="<?php bloginfo('charset');?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
 </head>
 
 <body>
@@ -27,14 +26,14 @@
 
       <div id="navbarBasicExample" class="navbar-menu py-4">
         <div class="navbar-end">
-          <a href="/" class="navbar-item">Home</a>
-          <a href="http://localhost:8080/category/baths/" class="navbar-item">Bathtub</a>
-          <a href="http://localhost:8080/category/farmhouse-sinks/" class="navbar-item">Farmhouse Sink</a>
-          <a href="http://localhost:8080/category/undermount-sinks/" class="navbar-item">Undermount Sink</a>
-          <a href="http://localhost:8080/category/additional-sinks/" class="navbar-item">Additional Sink</a>
-          <a href="http://localhost:8080/category/hoods/" class="navbar-item">Hoods</a>
-          <a href="http://localhost:8080/about/" class="navbar-item">About</a>
-          <a href="http://localhost:8080/contact/" class="navbar-item">Contact</a>
+          <a href="<?php echo home_url(); ?>" class="navbar-item">Home</a>
+          <a href="<?php echo home_url(); ?>/category/baths/" class="navbar-item">Bathtub</a>
+          <a href="<?php echo home_url(); ?>/category/farmhouse-sinks/" class="navbar-item">Farmhouse Sink</a>
+          <a href="<?php echo home_url(); ?>/category/undermount-sinks/" class="navbar-item">Undermount Sink</a>
+          <a href="<?php echo home_url(); ?>/category/additional-sinks/" class="navbar-item">Additional Sink</a>
+          <a href="<?php echo home_url(); ?>/category/hoods/" class="navbar-item">Hoods</a>
+          <a href="<?php echo home_url(); ?>/about/" class="navbar-item">About</a>
+          <a href="<?php echo home_url(); ?>/contact/" class="navbar-item">Contact</a>
         </div>
       </div>
 
