@@ -16,9 +16,9 @@ $gallery_bath = get_field('baths');
         <a href="http://localhost:8080/category/baths/">
           <figure class="image">
             <img class="is-rounded"
-              src="<?php echo $gallery_bath['sizes']['medium_large'] .'"' . ' alt='.$gallery_bath['alt'];?>" />
+              src="<?php echo esc_html($gallery_bath['sizes']['medium_large']) .'"' . ' alt='.esc_html($gallery_bath['alt']);?>" />
           </figure>
-          <h2 class="subtitle is-4 pt-2 has-text-centered"><?php echo $gallery_bath['title']?></h2>
+          <h2 class="subtitle is-4 pt-2 has-text-centered"><?php echo esc_html($gallery_bath['title'])?></h2>
         </a>
       </div>
 
@@ -26,9 +26,9 @@ $gallery_bath = get_field('baths');
         <a href="http://localhost:8080/category/farmhouse-sinks/">
           <figure class="image">
             <img class="is-rounded"
-              src="<?php echo $gallery_fs['sizes']['medium_large'] .'"' . ' alt='.$gallery_fs['alt'];?>" />
+              src="<?php echo esc_html($gallery_fs['sizes']['medium_large']) .'"' . ' alt='.esc_html($gallery_fs['alt']);?>" />
           </figure>
-          <h2 class="subtitle is-4 pt-2 has-text-centered"><?php echo $gallery_fs['title']?></h2>
+          <h2 class="subtitle is-4 pt-2 has-text-centered"><?php echo esc_html($gallery_fs['title'])?></h2>
         </a>
       </div>
 
@@ -36,9 +36,9 @@ $gallery_bath = get_field('baths');
         <a href="http://localhost:8080/category/undermount-sinks/">
           <figure class="image">
             <img class="is-rounded"
-              src="<?php echo $gallery_us['sizes']['medium_large'] .'"' . ' alt='.$gallery_us['alt'];?>" />
+              src="<?php echo esc_html($gallery_us['sizes']['medium_large']) .'"' . ' alt='.esc_html($gallery_us['alt']);?>" />
           </figure>
-          <h2 class="subtitle is-4 pt-2 has-text-centered"><?php echo $gallery_us['title']?></h2>
+          <h2 class="subtitle is-4 pt-2 has-text-centered"><?php echo esc_html($gallery_us['title'])?></h2>
         </a>
       </div>
 
@@ -50,9 +50,9 @@ $gallery_bath = get_field('baths');
         <a href="http://localhost:8080/category/additional-sinks/">
           <figure class="image">
             <img class="is-rounded"
-              src="<?php echo $gallery_as['sizes']['medium_large'] .'"' . ' alt='.$gallery_as['alt'];?>" />
+              src="<?php echo esc_html($gallery_as['sizes']['medium_large']) .'"' . ' alt='.esc_html($gallery_as['alt']);?>" />
           </figure>
-          <h2 class="subtitle is-4 pt-2 has-text-centered"><?php echo $gallery_as['title']?></h2>
+          <h2 class="subtitle is-4 pt-2 has-text-centered"><?php echo esc_html($gallery_as['title'])?></h2>
         </a>
       </div>
 
@@ -60,9 +60,9 @@ $gallery_bath = get_field('baths');
         <a href="http://localhost:8080/category/hoods/">
           <figure class="image">
             <img class="is-rounded"
-              src="<?php echo $gallery_hoods['sizes']['medium_large'] .'"' . ' alt='.$gallery_hoods['alt'];?>" />
+              src="<?php echo esc_html($gallery_hoods['sizes']['medium_large']) .'"' . ' alt='.esc_html($gallery_hoods['alt']);?>" />
           </figure>
-          <h2 class="subtitle is-4 pt-2 has-text-centered"><?php echo $gallery_hoods['title']?></h2>
+          <h2 class="subtitle is-4 pt-2 has-text-centered"><?php echo esc_html($gallery_hoods['title'])?></h2>
         </a>
       </div>
 

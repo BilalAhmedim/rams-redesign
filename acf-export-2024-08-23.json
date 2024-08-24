@@ -428,7 +428,7 @@
             {
                 "key": "field_66bc402774454",
                 "label": "Size Length X Width X Height",
-                "name": "size_length_x_width_x_height_",
+                "name": "size_length_x_width_x_height",
                 "aria-label": "",
                 "type": "text",
                 "instructions": "",

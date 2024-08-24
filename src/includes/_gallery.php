@@ -28,7 +28,7 @@ $query = New WP_Query($args);
     <div class="column is-half-mobile is-half-desktop">
       <a href="<?php the_permalink(); ?>" class="">
         <figure class="image">
-          <img src="<?php echo $image['sizes']['medium'];?>" alt="<?php echo $image['alt'] ?>" />
+          <img src="<?php echo esc_html($image['sizes']['medium']);?>" alt="<?php echo esc_html($image['alt']) ?>" />
         </figure>
         <h2 class="subtitle is-4 pt-2 has-text-centered"><?php the_title(); ?></h2>
       </a>

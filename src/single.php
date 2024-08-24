@@ -34,15 +34,16 @@ $categories = get_the_category();
           <i
             class="fa-solid fa-angles-left dropdown fa-2x is-pulled-left is-unselectable is-clickable arrows arrow-left"></i>
           <i class="fa-solid fa-angles-right fa-2x is-pulled-right is-unselectable is-clickable arrows arrow-right"></i>
-          <img class="zoomable__img" src="<?php echo $front_image['sizes']['large']; ?>" data-current-slide="1" alt="">
+          <img class="zoomable__img" src="<?php echo esc_html($front_image['sizes']['large']); ?>"
+            data-current-slide="1" alt="">
         </div>
         <div class="sub-images mx-auto is-centered">
-          <img class="carusel" src="<?php echo $front_image['sizes']['thumbnail']; ?>" data-img-src="1"
-            data-src-large="<?php echo $front_image['sizes']['large']; ?>" alt="">
-          <img class="carusel" src="<?php echo $side_image['sizes']['thumbnail']; ?>" data-img-src="2"
-            data-src-large="<?php echo $side_image['sizes']['large']; ?>" alt="">
-          <img class="carusel" src="<?php echo $top_image['sizes']['thumbnail']; ?>" data-img-src="3"
-            data-src-large="<?php echo $top_image['sizes']['large']; ?>" alt="">
+          <img class="carusel" src="<?php echo esc_html($front_image['sizes']['thumbnail']); ?>" data-img-src="1"
+            data-src-large="<?php echo esc_html($front_image['sizes']['large']); ?>" alt="">
+          <img class="carusel" src="<?php echo esc_html($side_image['sizes']['thumbnail']); ?>" data-img-src="2"
+            data-src-large="<?php echo esc_html($side_image['sizes']['large']); ?>" alt="">
+          <img class="carusel" src="<?php echo esc_html($top_image['sizes']['thumbnail']); ?>" data-img-src="3"
+            data-src-large="<?php echo esc_html($top_image['sizes']['large']); ?>" alt="">
         </div>
 
 
@@ -54,18 +55,19 @@ $categories = get_the_category();
           <h2 class="subtitle is-3 mb-6">Product Details</h2>
           <ul class="product-details">
             <li class="mb-5 is-size-5"><span class="has-text-weight-medium">Product Name
-                :</span><?php echo $product_name ;?></li>
+                :</span><?php echo esc_html($product_name) ;?></li>
             <li class="mb-5 is-size-5"><span class="has-text-weight-medium">Item Number :
-              </span><?php echo $item_number;?></li>
-            <li class="mb-5 is-size-5"><span class="has-text-weight-medium">Size : </span><?php echo $size;?></li>
+              </span><?php echo esc_html($item_number);?></li>
+            <li class="mb-5 is-size-5"><span class="has-text-weight-medium">Size : </span><?php echo esc_html($size);?>
+            </li>
             <li class="mb-5 is-size-5"><span class="has-text-weight-medium">Finish :
-              </span><?php echo $product_finish;?></li>
+              </span><?php echo esc_html($product_finish);?></li>
             <li class="mb-5 is-size-5"><span class="has-text-weight-medium">Material :
-              </span><?php echo $product_material;?></li>
+              </span><?php echo esc_html($product_material);?></li>
             <li class="mb-5 is-size-5"><span class="has-text-weight-medium">Finishes Available :
-              </span><?php echo $finishes_available;?></li>
+              </span><?php echo esc_html($finishes_available);?></li>
             <li class="mb-5 is-size-5"><span class="has-text-weight-medium">Product Description :
-              </span><?php echo $product_description;?></li>
+              </span><?php echo esc_html($product_description);?></li>
           </ul>
         </div>
       </div>
@@ -106,7 +108,7 @@ $categories = get_the_category();
     <div class="column is-half-mobile is-half-desktop">
       <a href="<?php the_permalink(); ?>" class="">
         <figure class="image">
-          <img src="<?php echo $image['sizes']['medium'];?>" alt="<?php echo $image['alt'] ?>" />
+          <img src="<?php echo esc_html($image['sizes']['medium']);?>" alt="<?php echo esc_html($image['alt']) ?>" />
         </figure>
         <h2 class="subtitle is-4 pt-2 has-text-centered"><?php the_title(); ?></h2>
       </a>
