@@ -14,19 +14,32 @@ if (is_front_page()){ // Home Page
   // Gallery Section
   $gallery_home = get_template_directory(). '/includes/_gallery_home.php';
   include $gallery_home;
-
   //gallery section
 
   // CTA Section
   $cta = get_template_directory() . '/includes/_cta.php';
   include $cta;
 } // Home PAGE
+
 else if(is_page('about')){
   // About Page
   $about = get_template_directory() . '/includes/_about.php';
   include $about;
   // About Page
-}else {
+}
+else if(is_page('contact')){
+  // Contact Page
+  $contact = get_template_directory() . '/includes/_contact.php';
+  include $contact;
+  // Contact Page
+}
+else if(is_page('privacy-policy')){
+  // Privacy Policy
+  $privacy = get_template_directory() . '/includes/_privacy.php';
+  include $privacy;
+  // Privacy Policy
+}
+else {
   // Gallery
   $gallery = get_template_directory() . '/includes/_gallery.php';
   include $gallery;
