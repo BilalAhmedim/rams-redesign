@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<?php language_attributes();?>" data-theme="light">
+<html <?php echo language_attributes();?> data-theme="light">
 
 <head>
   <?php wp_head(); ?>
@@ -12,7 +12,7 @@
     <div class="container">
 
       <div class="navbar-brand py-4">
-        <a class="navbar-item" href="https://bulma.io">
+        <a class="navbar-item" href="<?php echo home_url();?>">
           <img src="<?php echo get_template_directory_uri(); ?>/asset/rams-logo.png" id="logo-image" alt="Logo" />
         </a>
 
@@ -34,6 +34,15 @@
           <a href="<?php echo home_url(); ?>/category/hoods/" class="navbar-item">Hoods</a>
           <a href="<?php echo home_url(); ?>/about/" class="navbar-item">About</a>
           <a href="<?php echo home_url(); ?>/contact/" class="navbar-item">Contact</a>
+          <a class="navbar-item">
+            <label for="mode">
+              <span class="is-size-6 theme">
+                <i class="fas fa-lg fa-sun"></i>
+                <i class="fas fa-moon"></i>
+              </span>
+              <input id="mode" name="mode" type="checkbox" class="is-hidden checkbox">
+            </label>
+          </a>
         </div>
       </div>
 
