@@ -35,12 +35,12 @@
           <a href="<?php echo home_url(); ?>/about/" class="navbar-item">About</a>
           <a href="<?php echo home_url(); ?>/contact/" class="navbar-item">Contact</a>
           <a class="navbar-item">
-            <label for="mode">
+            <label for="ThemesSwitch">
               <span class="is-size-6 theme">
                 <i class="fas fa-lg fa-sun is-hidden"></i>
                 <i class="fas fa-lg fa-moon"></i>
               </span>
-              <input id="mode" name="mode" type="checkbox" class="is-hidden checkbox">
+              <input id="ThemesSwitch" name="ThemesSwitch" type="checkbox" class="is-hidden- checkbox">
             </label>
           </a>
         </div>
