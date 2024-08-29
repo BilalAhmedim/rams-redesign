@@ -37,8 +37,8 @@
           <a class="navbar-item">
             <label for="mode">
               <span class="is-size-6 theme">
-                <i class="fas fa-lg fa-sun"></i>
-                <i class="fas fa-moon"></i>
+                <i class="fas fa-lg fa-sun is-hidden"></i>
+                <i class="fas fa-lg fa-moon"></i>
               </span>
               <input id="mode" name="mode" type="checkbox" class="is-hidden checkbox">
             </label>
