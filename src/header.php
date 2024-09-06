@@ -40,7 +40,7 @@
                 <i class="fas fa-lg fa-sun is-hidden"></i>
                 <i class="fas fa-lg fa-moon"></i>
               </span>
-              <input id="ThemesSwitch" name="ThemesSwitch" type="checkbox" class="is-hidden- checkbox">
+              <input id="ThemesSwitch" name="ThemesSwitch" type="checkbox" class="is-hidden checkbox">
             </label>
           </a>
         </div>

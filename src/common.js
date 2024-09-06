@@ -26,41 +26,41 @@ const theme = {
   dark: 'Dark'
 };
 
-const lightTheme = e => {
-  document.documentElement.setAttribute('data-theme', 'dark');
-  dark.classList.add('is-hidden');
-  light.classList.remove('is-hidden');
-  localStorage.setItem(theme.theme, theme.dark);
-  console.log('light code block theme storage -> ' + localStorage.getItem(theme.theme));
-}
-
-const darkTheme = e => {
-  document.documentElement.setAttribute('data-theme', 'light');
-  dark.classList.remove('is-hidden');
-  light.classList.add('is-hidden');
-  localStorage.setItem(theme.theme, theme.light);
-  console.log('dark code block theme storage -> ' + localStorage.getItem(theme.theme));
-}
-
-const themeToggle = e => {
-  console.clear();
-  if (localStorage.getItem(theme.theme) === theme.light) {
-    darkTheme();
-  } else (localStorage.getItem(theme.theme) === theme.dark) {
-    lightTheme();
+const applyTheme = (themeName) => {
+  if (themeName === theme.dark) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    dark.classList.add('is-hidden');
+    light.classList.remove('is-hidden');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+    dark.classList.remove('is-hidden');
+    light.classList.add('is-hidden');
   }
-}
+  localStorage.setItem(theme.theme, themeName);
+  console.log(`Current theme stored -> ${localStorage.getItem(theme.theme)}`);
+};
+
+const themeToggle = () => {
+  const currentTheme = localStorage.getItem(theme.theme);
+  if (currentTheme === theme.light) {
+    applyTheme(theme.dark);
+  } else {
+    applyTheme(theme.light);
+  }
+};
 
 checkbox.addEventListener('click', themeToggle);
 
-// set Light Theme as a default theme
-const setDefaultTheme = e => {
-  if (localStorage.getItem(theme.theme) === null) {
+// Set Light Theme as a default theme
+const setDefaultTheme = () => {
+  const savedTheme = localStorage.getItem(theme.theme);
+  if (savedTheme === null) {
     localStorage.setItem(theme.theme, theme.light);
-    document.documentElement.setAttribute('data-theme', 'light');
   }
-  themeToggle();
-}
+  applyTheme(localStorage.getItem(theme.theme));
+};
+
 setDefaultTheme();
+
 
 // set Light Theme as a default theme
