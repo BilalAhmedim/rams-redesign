@@ -14,7 +14,7 @@
     <div class="columns is-variable is-8 pb-4">
 
       <div class="column is-one-third">
-        <a href="http://localhost:8080/category/baths/">
+        <a href="<?php echo home_url(); ?>/category/baths/">
           <figure class="image">
             <img class="is-rounded" src="<?php echo esc_html($gallery_bath['sizes']['medium_large'])?>"
               alt="<?php echo esc_html($gallery_bath['alt']);?>" />
@@ -24,7 +24,7 @@
       </div>
 
       <div class="column is-one-third">
-        <a href="http://localhost:8080/category/farmhouse-sinks/">
+        <a href="<?php echo home_url(); ?>/category/farmhouse-sinks/">
           <figure class="image">
             <img class="is-rounded" src="<?php echo esc_html($gallery_fs['sizes']['medium_large'])?>"
               alt="<?php echo esc_html($gallery_fs['alt']);?>" />
@@ -34,7 +34,7 @@
       </div>
 
       <div class="column is-one-third">
-        <a href="http://localhost:8080/category/undermount-sinks/">
+        <a href="<?php echo home_url(); ?>/category/undermount-sinks/">
           <figure class="image">
             <img class="is-rounded" src="<?php echo esc_html($gallery_us['sizes']['medium_large'])?>"
               alt="<?php echo esc_html($gallery_us['alt']);?>" />
@@ -48,7 +48,7 @@
     <div class="columns is-justify-content-center">
 
       <div class="column is-one-third">
-        <a href="http://localhost:8080/category/additional-sinks/">
+        <a href="<?php echo home_url(); ?>/category/additional-sinks/">
           <figure class="image">
             <img class="is-rounded" src="<?php echo esc_html($gallery_as['sizes']['medium_large'])?>"
               alt="<?php echo esc_html($gallery_as['alt']);?>" />
@@ -58,7 +58,7 @@
       </div>
 
       <div class="column is-one-third">
-        <a href="http://localhost:8080/category/hoods/">
+        <a href="<?php echo home_url(); ?>/category/hoods/">
           <figure class="image">
             <img class="is-rounded" src="<?php echo esc_html($gallery_hoods['sizes']['medium_large'])?>"
               alt="<?php echo esc_html($gallery_hoods['alt']);?>" />
@@ -68,7 +68,7 @@
       </div>
 
       <div class="column is-one-third">
-        <a href="http://localhost:8080/category/uncategorized/">
+        <a href="<?php echo home_url(); ?>/category/uncategorized/">
           <figure class="image">
             <img class="is-rounded" src="<?php echo esc_html($gallery_uncategorized['sizes']['medium_large'])?>"
               alt="<?php echo esc_html($gallery_uncategorized['alt']);?>" />
